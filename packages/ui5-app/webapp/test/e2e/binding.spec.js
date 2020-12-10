@@ -1,4 +1,17 @@
 describe("binding", function () {
+
+    afterEach(() => {
+        browser.executeScript(`$.ajax({ 
+            type: "POST",
+            url: 'http://localhost:3000/coverage/client',
+            data: JSON.stringify(window.__coverage__),
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+          }
+          });`);
+    });
+
     it("Other view: PeopleList: items aggregation", function () {
         element(
             by.control({

@@ -117,3 +117,10 @@ server:
     afterMiddleware: compression
     configuration:
       debug: true
+  - name: ui5-middleware-code-coverage
+    afterMiddleware: compression
+    mountPath: /
+    configuration:
+      path: "webapp"
+      enabled: "true"
+      exclude: "test,resources"

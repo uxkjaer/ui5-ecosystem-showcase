@@ -53,3 +53,11 @@ server:
         url: "https://services.odata.org/V2/Northwind/Northwind.svc/"
       - name: "todos"
         url: "https://jsonplaceholder.typicode.com/todos/"
+  - name: ui5-middleware-code-coverage
+    afterMiddleware: compression
+    mountPath: /
+    configuration:
+      path: "webapp"
+      enabled: "true"
+      exclude: "test,resources"
+

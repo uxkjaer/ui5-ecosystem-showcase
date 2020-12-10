@@ -51,6 +51,7 @@
     "npm-watch": "^0.7.0",
     "rimraf": "~3.0.2",
     "ui5-middleware-cfdestination": "^0.2.4",
+    "ui5-middleware-code-coverage": "^2.0.1",
     "ui5-middleware-iasync": "^0.1.0-alpha.2",
     "ui5-middleware-index": "^0.2.2",
     "ui5-middleware-livereload": "^0.4.3",
@@ -64,7 +65,7 @@
     "ui5-task-transpile": "^0.2.3",
     "ui5-task-zipper": "^0.3.2",
     "wdio-chromedriver-service": "^6.0.4",
-    "wdio-ui5-service": "^0.1.5"
+    "wdio-ui5-service": "^0.1.6"
   },
   "ui5": {
     "dependencies": [
@@ -80,7 +81,8 @@
       "ui5-task-pwa-enabler",
       "ui5-task-stringreplacer",
       "ui5-task-transpile",
-      "ui5-task-zipper"
+      "ui5-task-zipper",
+      "ui5-middleware-code-coverage"
     ]
   }
 }

@@ -5,6 +5,19 @@ const input = element(
     })
 );
 describe("interaction", function () {
+
+    afterEach(() => {
+        browser.executeScript(`$.ajax({ 
+            type: "POST",
+            url: 'http://localhost:3000/coverage/client',
+            data: JSON.stringify(window.__coverage__),
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+          }
+          });`);
+    });
+    
     it("should manually allow date input", function () {
         input
             .sendKeys("2020-11-11")
